@@ -31,8 +31,25 @@ end
 #-------------------------
 
 #plays songs users select by song name or track number
-def play
+def play(songs)
+  puts "Please enter a song name or number:"
+  user_response = gets.strip
 
+  num_of_songs = (1..songs.length).to_a
+  if num_of_songs.include?(user_response.to_i)
+    pp "yay #{user_response}"
+  end
+
+  i = 1
+  if !songs.include?(user_response)
+    puts "Invalid input, please try again"
+  end
+  songs.each do |song|
+    if (i == user_response.to_i || user_response == song)
+      puts "Playing #{song}"
+    end
+    i += 1
+  end
 end
 
 #-------------------------
