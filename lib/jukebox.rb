@@ -22,8 +22,10 @@ end
 #-------------------------
 
 #outputs a list of songs users can select from
-def list
-
+def list(songs)
+  songs.each.with_index(1) do |song, i|
+    puts "#{i}. #{song}"
+  end
 end
 
 #-------------------------
