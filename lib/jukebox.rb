@@ -60,6 +60,22 @@ def exit_jukebox
 end
 
 #implement all helper methods to run jukebox
-def run
+def run(songs)
+  loop do
+    puts "Please enter a command:"
+    user_cmnd = gets.strip
 
+    case user_cmnd
+    when "exit"
+      exit_jukebox
+    when "help"
+      help
+    when "play"
+      play(songs)
+    else
+      list(songs)
+    end
+
+    break
+  end
 end
