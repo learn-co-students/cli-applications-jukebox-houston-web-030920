@@ -39,7 +39,7 @@ end
 
 #exits jukebox when users want to stop listening
 def exit_jukebox
-
+  puts "Goodbye"
 end
 
 #implement all helper methods to run jukebox
